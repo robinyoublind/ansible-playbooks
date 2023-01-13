@@ -1,0 +1,11 @@
+- name: Update shell config
+  hosts: "*"
+  tasks:
+    - name: Copy starship.toml
+      ansible.builtin.copy:
+        src: ~/.config/starship.toml
+        dest: ~/.config/starship.toml
+        remote_src: false
+        owner: robin
+        group: robin
+        mode: '0644'

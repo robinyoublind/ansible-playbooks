@@ -1,0 +1,5 @@
+- hosts: '*'
+  tasks:
+    - name: Set a hostname
+      ansible.builtin.hostname:
+        name: k3s-master-05
